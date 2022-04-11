@@ -28,8 +28,8 @@ function App() {
   return (
     <div className="App">
       <Card idAdvice={idAdvice} adviceText={advice} />
-      <div className={styles.neon_dedtails} onClick={handleAdvice}>
-        <span className={styles.neon_dedtailswrapper}>
+      <div className={styles.neon_dedtails} >
+        <span className={styles.neon_dedtailswrapper} onClick={handleAdvice}>
           <img src={Icon} alt="icon" />
         </span>
       </div>
