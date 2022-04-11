@@ -8,6 +8,7 @@ export default function QuoteDetail() {
             className="quote-image"
             src={Divider}
             alt="Quote"
+            width={350}
 
         />
     </div>

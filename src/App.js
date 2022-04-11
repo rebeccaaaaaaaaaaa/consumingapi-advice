@@ -1,37 +1,38 @@
-import {useEffect, useState} from 'react';
-import Card from './components/Card';
-import NeonDetail from './components/NeonDetail';
+import { useEffect, useState } from "react";
+import Card from "./components/Card";
+import Icon from "./images/icon-dice.svg";
+import styles from "./styles/components/NeonDetail.module.css";
+import "./App.css";
 
-import { MdAutorenew } from "react-icons/md";
-import './App.css';
-
-import Api from './api';
+import Api from "./api";
 
 function App() {
-
-  const [advice, setAdvice] = useState('');
+  const [advice, setAdvice] = useState("");
   const [idAdvice, setIdAdvice] = useState(0);
 
-  useEffect(() => {
+  const handleAdvice = () => {
     Api.getAdvice()
-      .then(data => {
+      .then((data) => {
         setAdvice(data.slip.advice);
         setIdAdvice(data.slip.id);
       })
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    handleAdvice();
   }, []);
 
-  // refresh page on click
-  const handleClick = () => {
-    window.location.reload();
-    console.log('refreshed');
-  };
+
 
   return (
     <div className="App">
-      <Card idAdvice={idAdvice} adviceText={advice}/>
-      <NeonDetail  />
-      <span className="span-reload"> <MdAutorenew onClick={handleClick} /> </span>
+      <Card idAdvice={idAdvice} adviceText={advice} />
+      <div className={styles.neon_dedtails} onClick={handleAdvice}>
+        <span className={styles.neon_dedtailswrapper}>
+          <img src={Icon} alt="icon" />
+        </span>
+      </div>
     </div>
   );
 }
