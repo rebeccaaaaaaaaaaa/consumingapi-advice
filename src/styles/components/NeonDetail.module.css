@@ -1,0 +1,24 @@
+.neon_dedtails{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -3rem;
+}
+.neon_dedtailswrapper{
+    background: var(--neon-green);
+    padding: 1.5rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.neon_dedtailswrapper:hover{
+  /* CRIAR EFEITO DE NEON */
+  box-shadow: 0 0 30px rgb(82 255 168);
+
+
+
+}
