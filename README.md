@@ -11,7 +11,7 @@
  - CSS MODULE
 
 
-![Imagem]()
+![Imagem](https://raw.githubusercontent.com/rebeccaaaaaaaaaaa/consumingapi-advice/main/public/preview.png)
 
 # LINKS
 
